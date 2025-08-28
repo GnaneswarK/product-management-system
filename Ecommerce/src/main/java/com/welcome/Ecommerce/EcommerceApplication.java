@@ -2,15 +2,9 @@ package com.welcome.Ecommerce;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.cassandra.CassandraProperties;
-import org.springframework.context.ApplicationContext;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
-
-@SpringBootApplication
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 public class EcommerceApplication {
 
 	public static void main(String[] args){
